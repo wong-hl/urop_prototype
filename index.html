@@ -48,6 +48,12 @@
 		smartypants: true,
       },
 
+      <!-- Settings for pagination -->
+      pagination: {
+	        crossChapter: true,
+    		crossChapterText: true,
+      },
+
       <!-- Settings for tabs -->
       tabs: {
 	    persist    : true,      // default
@@ -64,6 +70,23 @@
 	  },
 
       <!-- Settings page footer -->
+
+      <!-- Settings flexible alerts -->
+     'flexible-alerts': {
+	     style: 'callout',
+	      note: {
+		label: "Note"
+	      },
+	      tip: {
+		label: "Tip!"
+	      },
+	      warning: {
+		label: "Warning!"
+	      },
+	      attention: {
+		label: "Quote"
+	      }
+	}
 
 
     }
@@ -95,5 +118,12 @@
 
   <!-- Page Footer  -->
   <script src="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-footer@1.x/dist/plugin.min.js"></script>
+
+  <!-- Flexible Alerts  -->
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+
+  <!-- Medium zoom  -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+
 </body>
 </html>
