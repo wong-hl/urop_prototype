@@ -8,5 +8,5 @@
 - Hosted on Github
 - Completely modular
 
-[Enter](https://wong-hl.github.io/urop_prototype)
-[Enter Local](welcome.md)
+<!-- [Enter](https://wong-hl.github.io/urop_prototype) -->
+[Enter](welcome.md)
