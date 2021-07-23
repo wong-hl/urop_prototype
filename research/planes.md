@@ -24,3 +24,8 @@ Purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Fringilla urn
 > In addition, this alert uses an own heading and hides specific icon.
 
 
+!> **Important** notice with `inline code` and additional placeholder text used
+to force the content to wrap and span multiple lines.
+
+?> **Tip** notice with `inline code` and additional placeholder text used to
+force the content to wrap and span multiple lines.

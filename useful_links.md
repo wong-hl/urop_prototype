@@ -8,4 +8,7 @@
 
 [Docsify Plugins](https://docsify.js.org/#/awesome?id=plugins)
 
+[Docsify Themable](https://jhildenbiddle.github.io/docsify-themeable/#/markdown?id=headings)
+
+[Markdown Guide](http://markdown.p2hp.com/assets/book/markdown-guide.pdf)
 

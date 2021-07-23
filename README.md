@@ -6,5 +6,23 @@ Auctor eu augue ut lectus arcu. Mi quis hendrerit dolor magna eget est lorem ips
 
 I can even add emojis like :joy: or :100:
 
+### These are default html buttons
+<button href="#" class="btn btn-large btn-round">Normal light round</button>
+
+<button href="#" class="btn btn-large">Large button</button>
+
+### These are custom buttons
+
+<button href="#" class="myButton">My cutom button</button>
+<button href="#" class="myButton">My cutom button</button>
+
+I can also align my buttons
+<div style="text-align: center"> 
+<button href="#" class="myButton">My cutom button</button>
+<button href="#" class="myButton">My cutom button</button>
+</div>
+
+
+
 
 

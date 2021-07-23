@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
+
+  <!-- Title --> 
+  <title>Protype</title>
+
+  <!-- Site Description --> 
+  <meta name="description" content="Prototype for UROP">
+
+  <!-- Site Viewport --> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- 1. Theme --> 
   <!-- Theme: Simple Dark --> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"> 
   <!-- Theme: Simple 
@@ -13,8 +21,33 @@
   <!-- Theme: Simple 
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themess/vue.css"/> -->
 
+  <!-- 2. PrismJS Themes -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/prism-github/prism-github.css"> -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/prism-theme-one-dark/prism-onedark.css"> -->
+
   <!-- Footer --> 
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-footer@1.x/dist/plugin.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-footer@1.x/dist/plugin.min.css"> 
+  
+  <!-- Custom Buttom - DIY CSS file  --> 
+  <link rel="stylesheet" href="cutom_theme.css">
+
+  <!-- 3. Custom Theme Properties -->
+  <style>
+      :root {
+        /* Reduce the font size */
+        --base-font-size: 20px; 
+
+        /* Change the theme color hue (0-360) */
+        /* --theme-hue: 325; */
+
+        /* Add sidebar navigation bullets */
+        /* --sidebar-nav-link-before-content-l1: "😀"; */
+        /* --sidebar-nav-link-before-content-l2: "💩"; */
+
+        /* Plugin: Zoom Image */
+	/* --zoomimage-overlay-background: rgba(0, 0, 0, 0.875);*/
+      }
+  </style>
 
 
 </head>
@@ -58,6 +91,7 @@
       <!-- Settings for markdown -->
       markdown: {
 		smartypants: true,
+		//smartLists: true,
       },
 
       <!-- Settings for pagination -->
@@ -83,6 +117,20 @@
 
       <!-- Settings page footer -->
 
+      <!-- Search settings -->
+      search: 'auto', // default
+
+      // complete configuration parameters
+      search: {
+        maxAge: 86400000, // Expiration time, the default one day
+        paths: 'auto',
+        placeholder: 'Type to search',
+        noData: 'No Results!',
+        // Headline depth, 1 - 6
+        depth: 6,
+        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+     },
+
       <!-- Settings flexible alerts -->
      'flexible-alerts': {
 	     style: 'callout',
@@ -101,13 +149,18 @@
 	},
 
 
-
     }
 
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+
+  <!-- Enable search  -->
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script> 
+
+  <!-- Run a script on a page that is external -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script> 
 
   <!-- docsify-themeable (latest v0.x.x) -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
@@ -143,7 +196,6 @@
 
   <!-- Accordian Plugin  -->
   <script src="//unpkg.com/docsify-accordify/src/index.js"></script>
-
 
 </body>
 </html>
