@@ -33,32 +33,55 @@ text
 
 
 ### A collapsible section 
-<details>
-  <summary>Click to expand!</summary>
+
+<details><summary> Example with list</summary><p>
+
   
-	  ### Heading
-	  1. A numbered
-	  2. list
-	     * With some
-	     * Sub bullets
+  1. A numbered
+  2. list
+      * With some
+      * Sub bullets
+</p></details>
 
-</details>
 
-<details>
-  <summary>  Click to expand! </summary>
+<details><summary>  Example with Code </summary><p>
+
+  Here is some text
   
   ```javascript
     function logSometing(something) {
       console.log(`Logging: ${something}`);
     }
   ```
-</details>
+</p></details>
 
-<details><summary>stuff with *mark* **down**</summary><p>
+
+<details><summary> Example with formatted text </summary><p>
 
 ## _formatted_ **heading** with [a](link)
-
 
 Collapsible until here.
 </p></details>
 
+
+
+<output data-lang="output">
+  <p v-if="false">Text for GitHub</p>
+
+  <ul>
+    <li v-for="i in 3">Item {{ i }}</li>
+  </ul>
+
+  <p>2 + 2 = {{ 2 + 2 }}</p>
+</output>
+<!-- 
+<script>
+  Vue.createApp({
+    // Options...
+  }).mount('#example');
+</script> -->
+
+<!-- <script src="accordion.html"></script> -->
+
+
+<!-- <span v-html="accordion"></span></p> -->
