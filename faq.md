@@ -1,20 +1,18 @@
 <h1> Frequently Asked Questions (FAQs) </h1>
 
-<h2> Topic 1 </h2>
-filler text
-
 <h3> What does the Guide say on Flying? + </h3>   
 
 “The Guide says there is an art to flying", said Ford, "or rather a knack. The knack lies in learning how to throw yourself at the ground and miss.”
+<div style="text-align: right"> &#151; Douglas Adams </div>
+The accordion plugin is not working :disappointed:
 
-### Why is the Earth round? + 
+<h3> Nested Lists </h3>   
 
 - firt item
 - second item
 	1. blah
 	2. bleh
 
-text
 
 ### Definition list
 
@@ -64,16 +62,22 @@ Collapsible until here.
 </p></details>
 
 
+### Experimenting with Vue Functions 
 
 <output data-lang="output">
-  <p v-if="false">Text for GitHub</p>
+  <p v-if="false"> Text for GitHub</p>
 
+  <p v-if="true"> Text only shows if condition is true</p>
+
+  This has been created in a loop 
   <ul>
     <li v-for="i in 3">Item {{ i }}</li>
   </ul>
 
+  RHS has been evaluated using the equation 2+2.
   <p>2 + 2 = {{ 2 + 2 }}</p>
 </output>
+
 <!-- 
 <script>
   Vue.createApp({
