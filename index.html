@@ -16,11 +16,11 @@
   <!-- 1. Theme --> 
   <!-- Theme: Simple Dark --> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
-  <!-- Theme: Simple 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> --> 
+  <!-- Theme: Simple --> 
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">  -->
 
-  <!-- Theme: Simple 
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themess/vue.css"/> -->
+  <!-- Theme: Simple --> 
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themess/vue.css"/>  -->
 
   <!-- 2. PrismJS Themes -->
   <!-- <link rel="stylesheet" href="https://unpkg.com/prism-github/prism-github.css"> -->
@@ -36,7 +36,7 @@
   <style>
       :root {
         /* Reduce the font size */
-        --base-font-size: 20px; 
+        --base-font-size: 18px; 
 
         /* Change the theme color hue (0-360) */
         /* --theme-hue: 325; */
@@ -53,14 +53,16 @@
 
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">Loading ...</div>
   <script>
     window.$docsify = {
       name: 'Prototype',
       repo: 'https://github.com/wong-hl/urop_prototype',
 
       coverpage: true,
-      onlyCover: false,
+      // onlyCover: false,
+
+      executeScript: true,
 
       <!-- Themeable Options -->
       themeable: {
@@ -116,16 +118,17 @@
       loadFooter: 'footer.md',
 
       <!-- Search settings -->
-      search: 'auto', // default
+      // search: 'auto', // default
 
       search: {
         maxAge: 86400000, // Expiration time, the default one day
         paths: 'auto',
-        placeholder: 'Type to search',
+        placeholder: 'Search',
         noData: 'No Results!',
         depth: 6,
-        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+        hideOtherSidebarContent: true, // whether or not to hide other sidebar content
       },
+
 
       <!-- Settings flexible alerts -->
      'flexible-alerts': {
@@ -144,6 +147,61 @@
 	      }
 	},
 
+      vueComponents: {
+          'button-counter': {
+            template:
+              '<button @click="count += 1">You clicked me {{ count }} times</button>',
+            data: function() {
+              return {
+                count: 0,
+              };
+            },
+          },
+      },
+
+      vueGlobalOptions: {
+          data: function() {
+            return {
+              count: 0,
+              message: 'Hello, World!',
+              // Fake API response
+              images: [
+                { title: 'Image 1', url: 'https://picsum.photos/150?random=1' },
+                { title: 'Image 2', url: 'https://picsum.photos/150?random=2' },
+                { title: 'Image 3', url: 'https://picsum.photos/150?random=3' },
+              ],
+            };
+          },
+          computed: {
+            timeOfDay: function() {
+              const date = new Date();
+              const hours = date.getHours();
+
+              if (hours < 12) {
+                return 'morning';
+              } else if (hours < 18) {
+                return 'afternoon';
+              } else {
+                return 'evening';
+              }
+            },
+          },
+          methods: {
+            hello: function() {
+              alert(this.message);
+            },
+          },
+      },
+
+      vueMounts: {
+          '#counter': {
+            data: function() {
+              return {
+                count: 0,
+              };
+            },
+          },
+      },
 
   };
 
@@ -167,13 +225,13 @@
   <!-- docsify-tabs (latest v1.x.x) -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
 
-  <!-- Footer area at base of side bar -->
+  <!-- Footer area at base of side bar
   <!-- unpkg.com -->
   <!-- <script src="https://unpkg.com/@markbattistella/docsify-sidebarfooter@latest"></script> -->
   <!-- jsDelivr -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/@markbattistella/docsify-sidebarfooter@latest"></script> -->
   <!-- locally -->
-  <!-- <script src="docsify-sidebarfooter.min.js"></script> --> 
+  <!-- <script src="docsify-sidebarfooter.min.js"></script>  --> -->
 
   <!-- Collapsible Sidebar -->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
@@ -182,7 +240,7 @@
   <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
 
   <!-- Flexible Alerts  -->
-  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <script src="//unpkg.com/docsify-plugin-flexible-alerts"></script>
 
   <!-- Medium zoom  -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
@@ -190,8 +248,11 @@
   <!-- Emoji Plugin  -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 
-  <!-- Accordian Plugin  -->
-  <script src="//unpkg.com/docsify-accordify/src/index.js"></script>
+
+  <!-- Vue Production -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script> -->
+  <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+
 
 </body>
 </html>
