@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
   <!-- Title --> 
   <title>Protype</title>
@@ -15,9 +15,10 @@
 
   <!-- 1. Theme --> 
   <!-- Theme: Simple Dark --> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
   <!-- Theme: Simple 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> --> 
+
   <!-- Theme: Simple 
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themess/vue.css"/> -->
 
@@ -56,7 +57,7 @@
   <script>
     window.$docsify = {
       name: 'Prototype',
-      repo: '',
+      repo: 'https://github.com/wong-hl/urop_prototype',
 
       coverpage: true,
       onlyCover: false,
@@ -85,7 +86,8 @@
 
       <!-- Create alias for sidebar to prevent issues -->
       alias: {
-		'/.*/_sidebar.md': '/_sidebar.md'
+		'/.*/_sidebar.md': '/_sidebar.md',
+		'/.*/_navbar.md': '/_navbar.md'
       },
 
       <!-- Settings for markdown -->
@@ -96,7 +98,7 @@
 
       <!-- Settings for pagination -->
       pagination: {
-	        crossChapter: true,
+            crossChapter: true,
     		crossChapterText: true,
       },
 
@@ -109,27 +111,20 @@
 	    tabHeadings: true       // default
 	    },
 
-      <!-- Settings for sidebar footer -->
-     autoFooter: {
-	    name:       "Add copyright name/company",          // company display name (required)
-	    copyYear:   2021,             // start copyright year (required)
-	  },
 
       <!-- Settings page footer -->
 
       <!-- Search settings -->
       search: 'auto', // default
 
-      // complete configuration parameters
       search: {
         maxAge: 86400000, // Expiration time, the default one day
         paths: 'auto',
         placeholder: 'Type to search',
         noData: 'No Results!',
-        // Headline depth, 1 - 6
         depth: 6,
         hideOtherSidebarContent: false, // whether or not to hide other sidebar content
-     },
+      },
 
       <!-- Settings flexible alerts -->
      'flexible-alerts': {
@@ -144,12 +139,12 @@
 		label: "Warning!"
 	      },
 	      attention: {
-		label: "Quote"
+		label: "Attention"
 	      }
 	},
 
 
-    }
+  };
 
   </script>
   <!-- Docsify v4 -->
@@ -173,11 +168,11 @@
 
   <!-- Footer area at base of side bar -->
   <!-- unpkg.com -->
-  <script src="https://unpkg.com/@markbattistella/docsify-sidebarfooter@latest"></script>
+  <!-- <script src="https://unpkg.com/@markbattistella/docsify-sidebarfooter@latest"></script> -->
   <!-- jsDelivr -->
-  <script src="https://cdn.jsdelivr.net/npm/@markbattistella/docsify-sidebarfooter@latest"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@markbattistella/docsify-sidebarfooter@latest"></script> -->
   <!-- locally -->
-  <script src="docsify-sidebarfooter.min.js"></script>
+  <!-- <script src="docsify-sidebarfooter.min.js"></script> --> 
 
   <!-- Collapsible Sidebar -->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>

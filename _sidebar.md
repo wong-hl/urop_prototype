@@ -8,4 +8,3 @@
 - [FAQs](faq.md)
 - [Useful Links](useful_links.md)
 
-<footer id="mb-footer"></footer>
