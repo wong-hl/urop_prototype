@@ -150,12 +150,48 @@
       vueComponents: {
           'button-counter': {
             template:
-              '<button @click="count += 1">You clicked me {{ count }} times</button>',
+              // '<button @click="count += 1">You clicked me {{ count }} times</button>',
+              `<button @click="count += 1">
+                You clicked me {{ count }} times
+              </button>
+              `,
             data: function() {
               return {
                 count: 0,
               };
             },
+          },
+          'more-button-counters': {
+            template: `
+            <div id='more-button-counters'>
+              <span v-for="counter in 4"> 
+                <button-counter></button-counter> 
+              </span>
+            </div>
+            `,
+          },
+          'blog-post': {
+            props: ['title'],
+            template: '<h3> {{title}} </h3>',
+            // props: ['post'],
+            // template: `
+            // <div class="blog-post">
+            //   <h3> {{post.title}} </h3>
+            //   <div v-html="post.content"></div>
+            // </div>
+            // `,
+          },
+          'mutiple-blog-post': {
+            props: ['posts'],
+            template: `
+            <div id='multiple-blog-post'>
+              <blog-post
+                v-for="post in posts"
+                v-bind:key="post.id"
+                v-bind:post="post"
+              ></blog-post>
+            </div>
+            `,
           },
       },
 
@@ -185,6 +221,10 @@
                 return 'evening';
               }
             },
+            currentTabComponent: function() {
+                return "tab-" + this.currentTab.toLowerCase();
+            },
+
           },
           methods: {
             hello: function() {

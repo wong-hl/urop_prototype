@@ -78,6 +78,49 @@ Collapsible until here.
   <p>2 + 2 = {{ 2 + 2 }}</p>
 </output>
 
+
+<!-- <button-counter></button-counter> -->
+
+<more-button-counters></more-button-counters>
+
+<blog-post title='this is my title'></blog-post>
+
+
+
+
+<!-- <script>
+  new Vue({
+    el: '#multiple-blog-post',
+    data: {
+      : [
+        { id: 1, title: 'My journey with Vue' },
+        { id: 2, title: 'Blogging with Vue' },
+        { id: 3, title: 'Why Vue is so fun' }
+      ]
+    },
+  });
+</script> -->
+
+
+<output data-lang="output">
+  <p>
+    <button @click="count -= 1">-</button>
+    {{ count }}
+    <button @click="count += 1">+</button>
+  </p>
+</output>
+
+
+<output data-lang="output">
+  <div style="display: flex;">
+    <figure v-for="image in images" style="flex: 1; text-align: center;">
+      <img :src="image.url">
+      <figcaption>{{ image.title }}</figcaption>
+    </figure>
+  </div>
+</output>
+
+
 <!-- 
 <script>
   Vue.createApp({
