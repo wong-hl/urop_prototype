@@ -85,21 +85,31 @@ Collapsible until here.
 
 <blog-post title='this is my title'></blog-post>
 
+<multiple-blog-post></multiple-blog-post>
 
+<output data-lang="output">
+  <div id="multiple-blog-post">
+      <blog-post
+        v-for="post in posts"
+        v-bind:key="post.id"
+        v-bind:title="post.title"
+      ></blog-post>
+  </div>
+</output>
 
-
-<!-- <script>
+<script>
   new Vue({
-    el: '#multiple-blog-post',
+    el: "#multiple-blog-post",
     data: {
-      : [
+      posts : [
         { id: 1, title: 'My journey with Vue' },
         { id: 2, title: 'Blogging with Vue' },
         { id: 3, title: 'Why Vue is so fun' }
       ]
     },
   });
-</script> -->
+</script>
+
 
 
 <output data-lang="output">

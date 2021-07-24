@@ -181,18 +181,6 @@
             // </div>
             // `,
           },
-          'mutiple-blog-post': {
-            props: ['posts'],
-            template: `
-            <div id='multiple-blog-post'>
-              <blog-post
-                v-for="post in posts"
-                v-bind:key="post.id"
-                v-bind:post="post"
-              ></blog-post>
-            </div>
-            `,
-          },
       },
 
       vueGlobalOptions: {
