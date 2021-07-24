@@ -81,34 +81,52 @@ Collapsible until here.
 
 <!-- <button-counter></button-counter> -->
 
+**One method for creating more buttons**
+
 <more-button-counters></more-button-counters>
 
-<blog-post title='this is my title'></blog-post>
-
-<multiple-blog-post></multiple-blog-post>
+**Another method for creating more buttons**
 
 <output data-lang="output">
-  <div id="multiple-blog-post">
-      <blog-post
-        v-for="post in posts"
-        v-bind:key="post.id"
-        v-bind:title="post.title"
-      ></blog-post>
+  <div>
+    <span v-for="counter in 4"> 
+      <button-counter></button-counter> 
+    </span>
   </div>
+
 </output>
 
-<script>
+<blog-post v-bind:post= "{title='this is my title', content: 'a'}"></blog-post>
+
+
+<!-- <output data-lang="output"> -->
+  <!-- <div id="multiple-blog-post"> -->
+    <!-- Create title only-->
+    <!-- <blog-post
+      v-for="post in posts"
+      v-bind:title="post.title"
+    ></blog-post> -->
+    <!-- Create with content -->
+    <!-- <blog-post
+      v-for="post in posts"
+      v-bind:key="post.id"
+      v-bind:post="post"
+    ></blog-post> -->
+  <!-- </div> -->
+<!-- </output> -->
+
+<!-- <script>
   new Vue({
     el: "#multiple-blog-post",
     data: {
       posts : [
-        { id: 1, title: 'My journey with Vue' },
-        { id: 2, title: 'Blogging with Vue' },
-        { id: 3, title: 'Why Vue is so fun' }
+        { id: 1, title: 'My journey with Vue', content:'loren ipsum' },
+        { id: 2, title: 'Blogging with Vue', content:'loren ipsum' },
+        { id: 3, title: 'Why Vue is so fun', content:'loren ipsum' },
       ]
     },
   });
-</script>
+</script> -->
 
 
 
