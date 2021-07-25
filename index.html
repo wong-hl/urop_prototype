@@ -1,179 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-  <!-- Title --> 
-  <title>Protype</title>
-
-  <!-- Site Description --> 
-  <meta name="description" content="Prototype for UROP">
-
-  <!-- Site Viewport --> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-
-  <!-- 1. Theme --> 
-  <!-- Theme: Simple Dark --> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
-  <!-- Theme: Simple --> 
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">  -->
-
-  <!-- Theme: Simple --> 
-  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themess/vue.css"/>  -->
-
-  <!-- 2. PrismJS Themes -->
-  <!-- <link rel="stylesheet" href="https://unpkg.com/prism-github/prism-github.css"> -->
-  <!-- <link rel="stylesheet" href="https://unpkg.com/prism-theme-one-dark/prism-onedark.css"> -->
-
-  <!-- Footer --> 
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-footer@1.x/dist/plugin.min.css"> 
-  
-  <!-- Custom Buttom - DIY CSS file  --> 
-  <link rel="stylesheet" href="cutom_theme.css">
-
-  <!-- 3. Custom Theme Properties -->
-  <style>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Protype</title>
+    <meta name="description" content="Prototype for UROP">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+    <link rel="stylesheet" href="https://unpkg.com/prism-github/prism-github.css">
+    <link rel="stylesheet" href="https://unpkg.com/prism-theme-one-dark/prism-onedark.css">
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-footer@1.x/dist/plugin.min.css"> -->
+    <link rel="stylesheet" href="cutom_theme.css">
+    <style>
       :root {
-        /* Reduce the font size */
-        --base-font-size: 18px; 
-
-        /* Change the theme color hue (0-360) */
-        /* --theme-hue: 325; */
-
-        /* Add sidebar navigation bullets */
-        /* --sidebar-nav-link-before-content-l1: "😀"; */
-        /* --sidebar-nav-link-before-content-l2: "💩"; */
-
-        /* Plugin: Zoom Image */
-	/* --zoomimage-overlay-background: rgba(0, 0, 0, 0.875);*/
+        --base-font-size: 18px;
       }
-  </style>
+    </style>
+  </head>
 
-
-</head>
-<body>
-  <div id="app">Loading ...</div>
-  <script>
-    window.$docsify = {
-      name: 'Prototype',
-      repo: 'https://github.com/wong-hl/urop_prototype',
-
-      coverpage: true,
-      // onlyCover: false,
-
-      executeScript: true,
-
-      <!-- Themeable Options -->
-      themeable: {
-        readyTransition : true, // default
-        responsiveTables: true  // default
-      },
-
-      <!-- Turn nav bar on -->
-      loadNavbar: true,
-      mergeNavbar: true,
-
-      <!-- Turn side bar on -->
-      loadSidebar: true,
-
-      <!-- Set nested sidebar depth that is shown-->
-      subMaxLevel: 1,
-
-      <!-- Maximum sidebar depth -->
-      maxLevel: 3,
-
-      <!-- Collapsible sidebar display level -->
-      sidebarDisplayLevel: 0,
-
-      <!-- Create alias for sidebar to prevent issues -->
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md',
-        '/.*/_navbar.md': '/_navbar.md'
-      },
-
-      <!-- Settings for markdown -->
-      markdown: {
-        smartypants: true,
-        smartLists: true,
-      },
-
-      <!-- Settings for pagination -->
-      pagination: {
-        crossChapter: true,
-    		crossChapterText: true,
-      },
-
-      <!-- Settings for tabs -->
-      tabs: {
-        persist    : true,      // default
-        sync       : true,      // default
-        theme      : 'material', 
-        tabComments: true,      // default
-        tabHeadings: true       // default
-	    },
-
-
-      <!-- Settings page footer -->
-      loadFooter: 'footer.md',
-
-      <!-- Search settings -->
-      // search: 'auto', // default
-
-      search: {
-        maxAge: 86400000, // Expiration time, the default one day
-        paths: 'auto',
-        placeholder: 'Search',
-        noData: 'No Results!',
-        depth: 6,
-        hideOtherSidebarContent: true, // whether or not to hide other sidebar content
-      },
-
-
-      <!-- Settings flexible alerts -->
-      'flexible-alerts': {
-        style: 'callout',
-        note: {
-          label: "Note"
-	      },
-	      tip: {
-          label: "Tip!"
-	      },
-	      warning: {
-          label: "Warning!"
-	      },
-	      attention: {
-          label: "Attention"
-	      }
-      },
-
-      vueComponents: {
-        'button-counter': {
-          template:
-            `<button @click="count += 1">
+  <body>
+    <div id="app">Loading ...</div>
+    <script defer src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <script defer src="prism.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+    <script>
+      window.$docsify = {
+        name: 'Prototype',
+        repo: 'https://github.com/wong-hl/urop_prototype',
+        coverpage: true,
+        executeScript: true,
+        themeable: {
+          readyTransition: true, // default
+          responsiveTables: true  // default
+        },
+        loadNavbar: true,
+        mergeNavbar: true,
+        loadSidebar: true,
+        subMaxLevel: 1,
+        maxLevel: 3,
+        sidebarDisplayLevel: 0,
+        alias: {
+          '/.*/_sidebar.md': '/_sidebar.md',
+          '/.*/_navbar.md': '/_navbar.md'
+        },
+        markdown: {
+          smartypants: true,
+          smartLists: true,
+        },
+        pagination: {
+          crossChapter: true,
+          crossChapterText: true,
+        },
+        tabs: {
+          persist: true,      // default
+          sync: true,      // default
+          theme: 'material',
+          tabComments: true,      // default
+          tabHeadings: true       // default
+        },
+        loadFooter: 'footer.md',
+        search: {
+          maxAge: 86400000, // Expiration time, the default one day
+          paths: 'auto',
+          placeholder: 'Search',
+          noData: 'No Results!',
+          depth: 6,
+          hideOtherSidebarContent: true, // whether or not to hide other sidebar content
+        },
+        'flexible-alerts': {
+          style: 'callout',
+          note: {
+            label: "Note"
+          },
+          tip: {
+            label: "Tip!"
+          },
+          warning: {
+            label: "Warning!"
+          },
+          attention: {
+            label: "Attention"
+          }
+        },
+        vueComponents: {
+          'button-counter': {
+            template:
+              `<button @click="count += 1">
               You clicked me {{ count }} times
             </button>
             `,
-          data: function() {
-            return {
-              count: 0,
-            };
+            data: function () {
+              return {
+                count: 0,
+              };
+            },
           },
-        },
-        'more-button-counters': {
-          template: `
+          'more-button-counters': {
+            template: `
           <div id='more-button-counters'>
             <span v-for="counter in 4"> 
               <button-counter></button-counter> 
             </span>
           </div>
           `,
+          },
         },
-      },
-
-      vueGlobalOptions: {
+        vueGlobalOptions: {
           computed: {
-            timeOfDay: function() {
+            timeOfDay: function () {
               const date = new Date();
               const hours = date.getHours();
 
@@ -185,76 +120,54 @@
                 return 'evening';
               }
             },
-            currentTabComponent: function() {
-                return "tab-" + this.currentTab.toLowerCase();
+            currentTabComponent: function () {
+              return "tab-" + this.currentTab.toLowerCase();
             },
 
           },
           methods: {
-            hello: function() {
+            hello: function () {
               alert(this.message);
             },
           },
-      },
-
-      vueMounts: {
+        },
+        vueMounts: {
           '#counter': {
-            data: function() {
+            data: function () {
               return {
                 count: 0,
               };
             },
           },
-      },
+        },
+        plugins: [
+         function (hook, vm) {
+            hook.doneEach(function (html) {
+               Prism.highlightAll()
+               console.log('mounted,', Prism, Prism.languages.flow)
+            })
 
-  };
-  </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+         },
+      ]
 
-  <!-- Enable search  -->
-  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script> 
+      };
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <script src="prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script> -->
+    <script src="https://cdn/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
+    <script src="//unpkg.com/docsify-plugin-flexible-alerts"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+  </body>
 
-  <!-- Run a script on a page that is external -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script> 
-
-  <!-- docsify-themeable (latest v0.x.x) -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
-
-  <!-- Pagination -->
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-
-  <!-- docsify-tabs (latest v1.x.x) -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-
-  <!-- Footer area at base of side bar
-  <!-- unpkg.com -->
-  <!-- <script src="https://unpkg.com/@markbattistella/docsify-sidebarfooter@latest"></script> -->
-  <!-- jsDelivr -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/@markbattistella/docsify-sidebarfooter@latest"></script> -->
-  <!-- locally -->
-  <!-- <script src="docsify-sidebarfooter.min.js"></script>  --> -->
-
-  <!-- Collapsible Sidebar -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-
-  <!-- Page Footer  -->
-  <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
-
-  <!-- Flexible Alerts  -->
-  <script src="//unpkg.com/docsify-plugin-flexible-alerts"></script>
-
-  <!-- Medium zoom  -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-
-  <!-- Emoji Plugin  -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-
-  <!-- Vue Production -->
-  <!-- <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script> -->
-  <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
-
-
-</body>
 </html>
