@@ -66,8 +66,8 @@
 
       <!-- Themeable Options -->
       themeable: {
-          readyTransition : true, // default
-          responsiveTables: true  // default
+        readyTransition : true, // default
+        responsiveTables: true  // default
       },
 
       <!-- Turn nav bar on -->
@@ -88,29 +88,29 @@
 
       <!-- Create alias for sidebar to prevent issues -->
       alias: {
-		'/.*/_sidebar.md': '/_sidebar.md',
-		'/.*/_navbar.md': '/_navbar.md'
+        '/.*/_sidebar.md': '/_sidebar.md',
+        '/.*/_navbar.md': '/_navbar.md'
       },
 
       <!-- Settings for markdown -->
       markdown: {
-		smartypants: true,
-		//smartLists: true,
+        smartypants: true,
+        smartLists: true,
       },
 
       <!-- Settings for pagination -->
       pagination: {
-            crossChapter: true,
+        crossChapter: true,
     		crossChapterText: true,
       },
 
       <!-- Settings for tabs -->
       tabs: {
-	    persist    : true,      // default
-	    sync       : true,      // default
-	    theme      : 'material', 
-	    tabComments: true,      // default
-	    tabHeadings: true       // default
+        persist    : true,      // default
+        sync       : true,      // default
+        theme      : 'material', 
+        tabComments: true,      // default
+        tabHeadings: true       // default
 	    },
 
 
@@ -131,73 +131,47 @@
 
 
       <!-- Settings flexible alerts -->
-     'flexible-alerts': {
-	     style: 'callout',
-	      note: {
-		label: "Note"
+      'flexible-alerts': {
+        style: 'callout',
+        note: {
+          label: "Note"
 	      },
 	      tip: {
-		label: "Tip!"
+          label: "Tip!"
 	      },
 	      warning: {
-		label: "Warning!"
+          label: "Warning!"
 	      },
 	      attention: {
-		label: "Attention"
+          label: "Attention"
 	      }
-	},
-
-      vueComponents: {
-          'button-counter': {
-            template:
-              // '<button @click="count += 1">You clicked me {{ count }} times</button>',
-              `<button @click="count += 1">
-                You clicked me {{ count }} times
-              </button>
-              `,
-            data: function() {
-              return {
-                count: 0,
-              };
-            },
-          },
-          'more-button-counters': {
-            template: `
-            <div id='more-button-counters'>
-              <span v-for="counter in 4"> 
-                <button-counter></button-counter> 
-              </span>
-            </div>
-            `,
-          },
-          // 'blog-post': {
-          //   props: ['title'],
-          //   template: '<h3> {{title}} </h3>',
-          // },
-          'blog-post': {
-            props: ['post'],
-            template: `
-            <div class="blog-post">
-              <h3>{{ post.title }}</h3>
-              <div v-html="post.content"></div>
-            </div>
-            `,
-          },
       },
 
-      vueGlobalOptions: {
+      vueComponents: {
+        'button-counter': {
+          template:
+            `<button @click="count += 1">
+              You clicked me {{ count }} times
+            </button>
+            `,
           data: function() {
             return {
               count: 0,
-              message: 'Hello, World!',
-              // Fake API response
-              images: [
-                { title: 'Image 1', url: 'https://picsum.photos/150?random=1' },
-                { title: 'Image 2', url: 'https://picsum.photos/150?random=2' },
-                { title: 'Image 3', url: 'https://picsum.photos/150?random=3' },
-              ],
             };
           },
+        },
+        'more-button-counters': {
+          template: `
+          <div id='more-button-counters'>
+            <span v-for="counter in 4"> 
+              <button-counter></button-counter> 
+            </span>
+          </div>
+          `,
+        },
+      },
+
+      vueGlobalOptions: {
           computed: {
             timeOfDay: function() {
               const date = new Date();
@@ -234,7 +208,6 @@
       },
 
   };
-
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
@@ -277,7 +250,6 @@
 
   <!-- Emoji Plugin  -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-
 
   <!-- Vue Production -->
   <!-- <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script> -->
