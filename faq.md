@@ -34,6 +34,8 @@ Second Term
 
 ### A collapsible section 
 
+The version shown here has a CSS style applied to make it look like an accodion
+
 <details><summary> Example with list</summary><p>
 
   
@@ -63,4 +65,17 @@ Second Term
 Collapsible until here.
 </p></details>
 
+You need to insert a space between the html and markdown content
 
+<details>
+<summary> 
+<h3> Alternative method to make this work </h3>
+</summary>
+
+- Abc
+- Abc
+
+</details>
+
+If we choose to use this, I can write something in vue to make the interface on 
+the markdown much nicer and easier. It will be very quick and easy
