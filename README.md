@@ -6,8 +6,7 @@ Auctor eu augue ut lectus arcu. Mi quis hendrerit dolor magna eget est lorem ips
 
 The above greeting is dynamically determined by the time of day
 
-<h3> Embrace open-source </h3>
-
+Maybe we can embrace open-source and get people to help us spot issues?
 Spot any mistakes in the website? Or is there outdated information? Feel free to raise an issue on the Github and we will work on it!
 
 <h3> There's emojis support :smile: </h3>
