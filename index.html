@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://unpkg.com/prism-theme-one-dark/prism-onedark.css">
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-footer@1.x/dist/plugin.min.css"> -->
     <link rel="stylesheet" href="cutom_theme.css">
+    <link rel="stylesheet" href="//unpkg.com/docsify-accordify/src/assets/ugly-dark-theme.css">
     <style>
       :root {
         --base-font-size: 18px;
@@ -22,8 +23,8 @@
   <body>
     <div id="app">Loading ...</div>
     <script defer src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-    <script defer src="prism.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+    <!-- <script src="//unpkg.com/docsify-accordify/src/index.js"></script> -->
     <script>
       window.$docsify = {
         name: 'Prototype',
@@ -59,7 +60,6 @@
           tabComments: true,      // default
           tabHeadings: true       // default
         },
-        loadFooter: 'footer.md',
         search: {
           maxAge: 86400000, // Expiration time, the default one day
           paths: 'auto',
@@ -82,6 +82,13 @@
           attention: {
             label: "Attention"
           }
+        },
+        footer: {
+          copy: '<span> &copy; 2021</span>',
+          auth: 'by Hui Ling Wong',
+          pre: '<hr/>',
+          style: 'text-align: right;',
+          class: 'className',
         },
         vueComponents: {
           'button-counter': {
@@ -141,32 +148,30 @@
           },
         },
         plugins: [
-         function (hook, vm) {
+          function (hook, vm) {
             hook.doneEach(function (html) {
-               Prism.highlightAll()
-               console.log('mounted,', Prism, Prism.languages.flow)
+              Prism.highlightAll()
+              console.log('mounted,', Prism, Prism.languages.flow)
             })
-
-         },
-      ]
+          },
+          // loadAccordions,
+        ]
 
       };
     </script>
-    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
     <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
     <script src="prism.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script> -->
-    <script src="https://cdn/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
     <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
     <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
     <script src="//unpkg.com/docsify-plugin-flexible-alerts"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+    <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
   </body>
 
