@@ -6,5 +6,6 @@
 	* [Aircraft](research/planes.md)
 	* [Bread](research/bread.md)
 - [FAQs](faq.md)
+- [Random](random.md)
 - [Useful Links](useful_links.md)
 
