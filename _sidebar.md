@@ -6,6 +6,8 @@
 	* [Aircraft](research/planes.md)
 	* [Bread](research/bread.md)
 - [FAQs](faq.md)
-- [Random](random.md)
+- [Experimenting](exp/README.md)
+	* [JavaScript](exp/jsjs.md)
+	* [Embeding](exp/embed.md)
 - [Useful Links](useful_links.md)
 

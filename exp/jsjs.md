@@ -1,4 +1,4 @@
-<h1> Messing around with JS </h1>
+<h1> Messing around </h1>
 
 ### Experimenting with Vue Functions 
 
@@ -18,6 +18,21 @@
 
 
 <!-- <button-counter></button-counter> -->
+### These are default html buttons
+<button href="#" class="btn btn-large btn-round">Normal light round</button>
+
+<button href="#" class="btn btn-large">Large button</button>
+
+### These are custom buttons
+
+<button href="#" class="myButton">My cutom button</button>
+<button href="#" class="myButton">My cutom button</button>
+
+I can also align my buttons
+<div style="text-align: center"> 
+<button href="#" class="myButton">My cutom button</button>
+<button href="#" class="myButton">My cutom button</button>
+</div>
 
 **One method for creating more buttons**
 
@@ -35,8 +50,6 @@
 </output>
 
 
-
-
 <output data-lang="output">
   <p>
     <button @click="count -= 1">-</button>
@@ -44,3 +57,5 @@
     <button @click="count += 1">+</button>
   </p>
 </output>
+
+
