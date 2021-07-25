@@ -18,7 +18,11 @@ Inline code section
 
 This code snippet is loaded directly from github. The raw version of the code must be used.
 
-This performes the Miller-Rabin Primality test. The test utilises Fermat's little theorem and that sqaure root 1 modulo n are 1 and -1. 
+This performes the Miller-Rabin Primality test. The test utilises, 
+1. Fermat's little theorem
+2. Sqaure root 1 modulo n are 1 and -1. 
+
+
 
 [Miller Primality Test](https://raw.githubusercontent.com/wong-hl/projEuler/main/miller_test.py ':include :type=code')
 
