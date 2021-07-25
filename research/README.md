@@ -10,5 +10,14 @@ Most scientists forget that.”
 >
 > <div style="text-align: right"> &#151; Douglas Adams, So long and Thanks for All the Fish </div>
 
+<h2> Embedding markdown files </h2>
+
 [file](file_to_embed.md ':include')
+
+<h3> Code below shows that above was indeed embedded </h3>
+
+[Markdown file for Reseach Page](../research/README.md ':include :type=code')
+
+
+
 
