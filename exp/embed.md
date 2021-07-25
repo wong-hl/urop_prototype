@@ -16,7 +16,7 @@ Inline code section
     import numpy as np
 ```
 
-This code snippet is loaded directly from github. The raw raw version of the code must be used.
+This code snippet is loaded directly from github. The raw version of the code must be used.
 
 This performes the Miller-Rabin Primality test. The test utilises Fermat's little theorem and that sqaure root 1 modulo n are 1 and -1. 
 
