@@ -79,3 +79,8 @@ You need to insert a space between the html and markdown content
 
 If we choose to use this, I can write something in vue to make the interface on 
 the markdown much nicer and easier. It will be very quick and easy
+
+<details><summary> lots and lots and lots and lots and lots and lots and lots and lots  and lots and lots and lots and lots and lots and lots and lots of text </summary><p>
+
+It's good to know it wraps
+</p></details>
